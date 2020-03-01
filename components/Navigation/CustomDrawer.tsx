@@ -1,12 +1,12 @@
 import {
     DrawerContentScrollView,
     DrawerItem,
-    DrawerItemList
-} from "@react-navigation/drawer";
-import React from "react";
-import { Image, SafeAreaView, Text, View, StyleSheet } from "react-native";
-import NavigationHead from "./NavigationHead";
-import PropTypes from "prop-types";
+    DrawerItemList,
+} from '@react-navigation/drawer';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import NavigationHead from './NavigationHead';
 
 const propTypes = {
     navigation: PropTypes.object.isRequired,
@@ -14,8 +14,8 @@ const propTypes = {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
-    }
+        flex: 1,
+    },
 });
 
 function CustomDrawer(props) {
@@ -40,9 +40,9 @@ function CustomDrawer(props) {
 CustomDrawer.propTypes = propTypes;
 CustomDrawer.defaultProps = {
     navigation: {
-        closeDrawer: () => { },
-        toggleDrawer: () => { }
-    }
+        closeDrawer: () => {},
+        toggleDrawer: () => {},
+    },
 };
 
 export default CustomDrawer;

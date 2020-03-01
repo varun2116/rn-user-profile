@@ -1,26 +1,27 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { Image, Text, View, StyleSheet, ImageBackground } from "react-native";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 const propTypes = {
-    profileName: PropTypes.string.isRequired
+    profileName: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({
-    container: { height: 250, backgroundColor: "#d2d2d2"},
+    container: { height: 200, backgroundColor: '#d2d2d2' },
     imageContainer: {
-        height: 200,
-        backgroundColor: "#d2d2d2",
-        alignItems: "center",
-        justifyContent: "center"
+        height: 150,
+        backgroundColor: '#d2d2d2',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
     },
-    image: { height: 150, width: 150, borderRadius: 60, backgroundColor: "transparent" },
     textContainer: {
         height: 50,
-        backgroundColor: "Green",
-        alignItems: "center",
-        justifyContent: "center"
-    }
+        backgroundColor: 'transparent',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
 
 function NavigationHead(props) {
@@ -28,9 +29,13 @@ function NavigationHead(props) {
     return (
         <View style={styles.container}>
             <View style={styles.imageContainer}>
-                <Image
-                    source={require("../../assets/avatar.png")}
-                    style={styles.image}
+                <Avatar
+                    rounded
+                    source={{
+                        uri:
+                            'https://banner2.cleanpng.com/20180920/yko/kisspng-computer-icons-portable-network-graphics-avatar-ic-5ba3c66df14d32.3051789815374598219884.jpg',
+                    }}
+                    size="large"
                 />
             </View>
             <View style={styles.textContainer}>
@@ -42,7 +47,7 @@ function NavigationHead(props) {
 
 NavigationHead.propTypes = propTypes;
 NavigationHead.defaultProps = {
-    profileName: "John Doe"
+    profileName: 'John Doe',
 };
 
 export default NavigationHead;
