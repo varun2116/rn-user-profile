@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import HeaderBar from '../HeaderBar';
-import { ServicesDefaultProps } from './constants';
-import ServicesList from './ServicesList';
-import { Text } from 'react-native-elements';
+import SkillsList from './SkillsList';
 
 const propTypes = {};
 
@@ -21,22 +18,19 @@ const styles = StyleSheet.create({
     },
 });
 
-function Services(props) {
+function Skills(props) {
     return (
         <View style={styles.container}>
-            <HeaderBar {...props} />
             <ScrollView>
                 <View style={styles.cardContainer}>
-                    <ServicesList />
+                    <SkillsList />
                 </View>
             </ScrollView>
         </View>
     );
 }
 
-Services.propTypes = propTypes;
-Services.defaultProps = {
-    ...ServicesDefaultProps,
-};
+Skills.propTypes = propTypes;
+Skills.defaultProps = {};
 
-export default Services;
+export default Skills;

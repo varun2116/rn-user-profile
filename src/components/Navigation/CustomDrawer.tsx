@@ -24,14 +24,14 @@ function CustomDrawer(props) {
             <NavigationHead {...props} />
             <DrawerContentScrollView {...props}>
                 <DrawerItemList {...props} />
-                <DrawerItem
+                {/* <DrawerItem
                     label="Close drawer"
                     onPress={() => props.navigation.closeDrawer()}
                 />
                 <DrawerItem
                     label="Toggle drawer"
                     onPress={() => props.navigation.toggleDrawer()}
-                />
+                /> */}
             </DrawerContentScrollView>
         </SafeAreaView>
     );
@@ -40,8 +40,8 @@ function CustomDrawer(props) {
 CustomDrawer.propTypes = propTypes;
 CustomDrawer.defaultProps = {
     navigation: {
-        closeDrawer: () => {},
-        toggleDrawer: () => {},
+        closeDrawer: () => { },
+        toggleDrawer: () => { },
     },
 };
 

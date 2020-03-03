@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Timeline from 'react-native-timeline-flatlist';
-import HeaderBar from '../HeaderBar';
 import { ExperienceListDefaultProps } from './constants';
 
 const propTypes = {
@@ -23,7 +22,6 @@ function Experience(props) {
     const { experienceList } = props;
     return (
         <View style={styles.container}>
-            <HeaderBar {...props} />
             <Timeline
                 data={experienceList}
                 circleSize={20}

@@ -1,17 +1,20 @@
 import { map, uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Card, Icon, Text, Slider } from 'react-native-elements';
-import { SkillsListDefaultProps } from './constants';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Text } from 'react-native-elements';
+import { Card } from 'react-native-material-ui';
 import ProgressBarAnimated from 'react-native-progress-bar-animated';
+import Icon from '../common/Icon';
+import { SkillsListDefaultProps } from './constants';
 
 const propTypes = {
-    servicesList: PropTypes.array.isRequired,
+    skillsList: PropTypes.array.isRequired,
 };
 
 const styles = StyleSheet.create({
     container: {
+        padding: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -21,18 +24,12 @@ function SkillsList(props) {
     const { skillsList } = props;
     return (
         <React.Fragment>
-            {map(skillsList, ({ title, iconName, value }) => (
+            {map(skillsList, ({ title, iconDetails, value }) => (
                 <Card
                     key={uniqueId('skillsList-card-')}
-                    wrapperStyle={styles.container}
+                    style={{ container: styles.container }}
                 >
-                    <Icon
-                        key={uniqueId('skillsList-icon-')}
-                        reverse
-                        name={iconName}
-                        type="font-awesome"
-                        color="#f50"
-                    />
+                    <Icon key={uniqueId('skillsList-icon-')} {...iconDetails} />
                     <Text key={uniqueId('skillsList-title-')} h3>
                         {title}
                     </Text>

@@ -65,9 +65,29 @@ Refer [website](https://pxltheme.com/wp/mugi/)
     npm install --save react-native-elements
 ```
 
+Progress bar module
+
 ```
     npm install react-native-progress --save
-    npm i react-native-timeline-flatlist --save
+```
+
+React Time line list module
+
+```
+    npm install react-native-timeline-flatlist --save
+```
+
+React material UI
+
+```
+    npm install react-native-material-ui --save
+```
+
+Native Base
+
+```
+    npm install native-base --save
+    expo install expo-font
 ```
 
 ```

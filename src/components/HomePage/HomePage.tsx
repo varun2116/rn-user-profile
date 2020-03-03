@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-elements';
-import HeaderBar from '../HeaderBar';
 
 const propTypes = {
     pageHead: PropTypes.string.isRequired,
@@ -36,7 +35,6 @@ function HomePage(props) {
     const { pageHead, pageSummary } = props;
     return (
         <View style={styles.container}>
-            <HeaderBar {...props} />
             <View style={styles.textContainer}>
                 <Text h1>{pageHead}</Text>
                 <Text>{pageSummary}</Text>
@@ -46,11 +44,13 @@ function HomePage(props) {
                     title="PortFolio"
                     type="solid"
                     buttonStyle={styles.buttonStyle}
+                    raised
                 />
                 <Button
                     title="Hire Me"
                     type="outline"
                     buttonStyle={styles.buttonStyle}
+                    raised
                 />
             </View>
         </View>

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import HeaderBar from '../HeaderBar';
-import SkillsList from './SkillsList';
+import { ServicesDefaultProps } from './constants';
+import ServicesList from './ServicesList';
 
 const propTypes = {};
 
@@ -19,20 +19,21 @@ const styles = StyleSheet.create({
     },
 });
 
-function Skills(props) {
+function Services(props) {
     return (
         <View style={styles.container}>
-            <HeaderBar {...props} />
             <ScrollView>
                 <View style={styles.cardContainer}>
-                    <SkillsList />
+                    <ServicesList />
                 </View>
             </ScrollView>
         </View>
     );
 }
 
-Skills.propTypes = propTypes;
-Skills.defaultProps = {};
+Services.propTypes = propTypes;
+Services.defaultProps = {
+    ...ServicesDefaultProps,
+};
 
-export default Skills;
+export default Services;
