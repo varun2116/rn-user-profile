@@ -99,3 +99,9 @@ Native Base
 ## Miscellineous
 
 Setting up [eslint & prettier](https://medium.com/dubizzletechblog/setting-up-prettier-and-eslint-for-js-and-react-apps-bbc779d29062)
+
+Setting up [tslint](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7)
+
+```
+    npm install typescript tslint tslint-react tslint-eslint-rules react-native-typescript-transformer tslint-react-recommended --save-dev
+```

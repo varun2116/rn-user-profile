@@ -1,4 +1,4 @@
-export const ExperienceListDefaultProps = {
+export const ExperienceListDefaultProps: object = {
     experienceList: [
         {
             time: '2019 - Present',

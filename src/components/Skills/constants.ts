@@ -1,6 +1,6 @@
 import { IconTypes, IconBackgroundTypes } from '../../utils/constants';
 
-export const SkillsListDefaultProps = {
+export const SkillsListDefaultProps: object = {
     skillsList: [
         {
             title: 'HTML5',

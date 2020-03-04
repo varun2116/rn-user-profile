@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 function HeaderBar({ navigation, route }) {
     const { navigate, openDrawer } = navigation;
     const { name } = route;
-    let centerName = 'John Doe';
+    let centerName: string = 'John Doe';
     if (!isEqual(name, NavigationScreens.HOME_SCREEN)) {
         centerName += `'s ${name}`;
     }

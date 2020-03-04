@@ -1,8 +1,8 @@
 import { IconTypes, IconBackgroundTypes } from '../../utils/constants';
 
-export const ServicesDefaultProps = {};
+export const ServicesDefaultProps: object = {};
 
-export const ServiceListDefaultProps = {
+export const ServiceListDefaultProps: object = {
     servicesList: [
         {
             title: 'Development',

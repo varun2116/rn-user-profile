@@ -5,8 +5,14 @@ import * as Font from 'expo-font';
 import React from 'react';
 import Navigation from './components/Navigation';
 
-class App extends React.Component {
-    constructor(props) {
+type Props = {};
+
+type State = {
+    isReady: boolean;
+};
+
+class App extends React.Component<Props, State> {
+    constructor(props: Props) {
         super(props);
         this.state = {
             isReady: false,

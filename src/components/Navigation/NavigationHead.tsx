@@ -3,6 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from 'react-native-elements';
 
+type Props = {
+    profileName: string;
+};
+
 const propTypes = {
     profileName: PropTypes.string.isRequired,
 };
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
     },
 });
 
-function NavigationHead(props) {
+function NavigationHead(props: Props) {
     const { profileName } = props;
     return (
         <View style={styles.container}>
